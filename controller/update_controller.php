@@ -7,7 +7,7 @@ $client= $_POST['client'];
 $description= $_POST['description'];
 
 $id=$_GET['id'];
- $sql = "update timeline_data SET name = '$name',date = '$date',client = '$client',description = '$description' WHERE sno='$id'";
+$sql = "update timeline_data SET name = '$name',date = '$date',client = '$client',description = '$description' WHERE sno='$id'";
 
 
 $entry = mysqli_query($conn,$sql);

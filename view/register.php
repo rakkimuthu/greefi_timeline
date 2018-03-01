@@ -1,3 +1,7 @@
+<?php
+include_once '../controller/function_controller.php';
+  overwrite(); 
+?>
 <html>
 <head>
 <title>Welcome!</title>
@@ -5,7 +9,7 @@
 <link rel="stylesheet" type="text/css" href="../css/list.css">
 </head>
 <body>  
-<form name="form1" method="post" action="../controler/login_controler.php">
+<form name="form1" method="post" action="../controller/login_controller.php">
 
 <div class="login">
   <div class="login-triangle"></div>
@@ -22,9 +26,3 @@
 </form>
 </body>
 </html>
-<?php
-session_start();
-if (isset($_SESSION["username"])) {
-   header("location: success.php");
-}
-?>

@@ -1,42 +1,11 @@
-  <?php 
-session_start();
-if (empty($_SESSION["username"])) {
-   header("location: ../view/index.php");
-}    
-?>  
-<html>
-<head>
-<title></title>
-<style>
-  .footer {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  padding: 1rem;
-  background-color: #efefef;
-  text-align: center;
-}
+<?php 
 
-</style>
- 
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-</head>
-<body > 
-  <nav class="navbar navbar-inverse" style ="background: darkblue";>
-      
-    <div class="container-fluid">
-      <div class="navbar-header">
-        <a class="navbar-brand" class="text-center" href="../view/success.php">Welcome</a>
-      </div>
-     
-      <div class="nav navbar-nav navbar-right">
-      </div>
-    </div>
-  </nav>
-<form method="post" action="../controler/insert_controler.php" >  
+include_once '../controller/function_controller.php';
+  write(); 
+include_once 'header.php';   
+?>  
+
+<form method="post" action="../controller/insert_controller.php" >  
     <div class="col-sm-offset-3 col-sm-9">
       <label> Project Name:</label><br>
 
@@ -57,6 +26,4 @@ if (empty($_SESSION["username"])) {
      <button>submit</button>
     </div>  
 </form>
-<div style ="background: darkblue;" class="footer">© 2018 Copyright: Greefitech.com</div>
-</body>
-</html>
+<?php include_once 'footer.php';

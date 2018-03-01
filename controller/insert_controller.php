@@ -1,8 +1,6 @@
 <?php
-session_start();
-if (empty($_SESSION["username"])) {
-	header("location:../view/index.php");
-}
+include_once '../controller/function_controller.php';
+  write(); 
 include_once "../model/db.php";
 if(!empty($_SESSION["username"])){
 	if (!empty($_POST['name'] && $_POST['date']&&$_POST['client']&&$_POST['description'])) {
